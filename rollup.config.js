@@ -6,6 +6,9 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 
+import tailwind from 'tailwindcss';
+
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -46,7 +49,13 @@ export default {
 			css: css => {
 				css.write('bundle.css');
 			},
-			preprocess: sveltePreprocess(),
+			preprocess: sveltePreprocess({
+				postcss: {
+					plugins: [
+						tailwind('./tailwind.config.js')
+					]
+				},
+			}),
 		}),
 
 		// If you have external dependencies installed from
