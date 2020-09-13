@@ -10,7 +10,6 @@ module.exports = {
       "./src/**/*.svelte",
       "./public/**/*.html",
       "./public/**/*.css",
-      // may also want to include base index.html
     ], 
     enabled: production // disable purge in dev
   },
