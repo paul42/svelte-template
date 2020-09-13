@@ -9,8 +9,10 @@ module.exports = {
     content: [
       "./src/**/*.svelte",
       "./public/**/*.html",
+    ],
+    css: [
       "./public/**/*.css",
-    ], 
+    ],
     enabled: production // disable purge in dev
   },
   theme: {
