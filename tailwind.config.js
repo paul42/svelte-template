@@ -1,5 +1,5 @@
 const production = !process.env.ROLLUP_WATCH;
-console.trace('read tailwind config')
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
