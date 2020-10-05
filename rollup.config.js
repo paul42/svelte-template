@@ -47,6 +47,7 @@ export default {
 			// a separate file - better for performance
 			css: css => {
 				css.write('bundle.css');
+				//maybe do the extrac here?
 			},
 			preprocess: sveltePreprocess({
 				postcss: {
